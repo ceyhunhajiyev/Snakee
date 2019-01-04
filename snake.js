@@ -43,8 +43,8 @@ let d;
 
 document.addEventListener("keydown", direction);
 
-function direction(event) {
-    let ket = event.keyCode;
+function direction(event){
+    let key = event.keyCode;
     if(key == 37 && d != "RIGHT") {
         left.play();
         d = "LEFT";
@@ -75,7 +75,8 @@ function collision(head,array) {
 
 // draw all in canvas
 
-function draw {
+function draw(){
+    
     ctx.drawImage(ground,0,0);
     
     for(let i = 0; i < snake.length ; i++) {
